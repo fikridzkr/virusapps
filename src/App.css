@@ -6,3 +6,14 @@
   background-image: url("https://covid19.go.id/storage/app/media/indonesia-map-new.jpg");
   background-size: cover;
 }
+
+strong {
+  font-family: "Ubuntu", sans-serif;
+}
+
+.bg-cream {
+  background-color: #fad8ca;
+}
+.bg-brown {
+  background-color: #ea6852;
+}
