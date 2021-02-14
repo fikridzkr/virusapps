@@ -30,7 +30,7 @@ export default class Chart extends Component {
 
   render() {
     return (
-      <div className="Chart m-auto w-75">
+      <div className="Chart m-auto w-75 ">
         <Bar
           data={this.state.chartdata}
           width={100}
@@ -38,7 +38,7 @@ export default class Chart extends Component {
           options={{
             title: {
               display: true,
-              text: "Live Data Statistik Corona Virus Di Indonesia",
+              text: "Live Data Statistik CoronaVirus Di Indonesia",
               fontSize: 25,
               fontFamily: "'Playfair Display',serif",
             },

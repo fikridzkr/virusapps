@@ -23,10 +23,11 @@ export default function Dates() {
   const bulan = date.getMonth();
   const tahun = date.getFullYear();
 
-  const today = `${tanggal}-${namabulan[bulan]}-${tahun}, ${jam} : 0${menit}`;
+  const today = `${tanggal}-${namabulan[bulan]}-${tahun}, ${jam} : ${menit}`;
   return (
     <p className="ubuntu">
-      Update terakhir: <strong>{today}</strong>
+      Update terakhir: <br />
+      <strong>{today}</strong>
     </p>
   );
 }
