@@ -8,7 +8,10 @@ export default class Footer extends Component {
           <img src="logo.png" alt="logo" className="logo"></img>
           <br />
           <span class="text-muted footer-text">
-            Made By <a href="https://github.com/fikridzkr">Fikri Dzakir</a>
+            Made By{" "}
+            <a href="https://github.com/fikridzkr">
+              Fikri Dzakir | Version 1.0
+            </a>
           </span>
         </div>
       </footer>

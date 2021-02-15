@@ -1,7 +1,77 @@
 import React, { Component } from "react";
 import { Row, Col, Button, Jumbotron, Container } from "react-bootstrap";
 import Dates from "../utils/Date";
+import axios from "axios";
 export default class Header extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      globaltotalPositif: 0,
+      globaltotalMeninggal: 0,
+      globaltotalSembuh: 0,
+      indonesiatotalPositif: 0,
+      indonesiatotalMeninggal: 0,
+      indonesiatotalSembuh: 0,
+
+      // provinsi: [],
+    };
+  }
+
+  componentDidMount() {
+    this.globalData();
+    this.indonesiaData();
+  }
+
+  // global data
+  globalData = () => {
+    let config = {
+      method: "get",
+      url: "https://api.covid19api.com/summary",
+      headers: {},
+    };
+
+    axios(config)
+      .then((response) => {
+        let globaltotalPositif = response.data.Global.TotalConfirmed.toLocaleString();
+        let globaltotalMeninggal = response.data.Global.TotalDeaths.toLocaleString();
+        let globaltotalSembuh = response.data.Global.TotalRecovered.toLocaleString();
+        this.setState({
+          globaltotalPositif,
+          globaltotalMeninggal,
+          globaltotalSembuh,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
+
+  // indonesia data
+  indonesiaData = () => {
+    let config = {
+      method: "get",
+      url: "https://api.covid19api.com/live/country/indonesia",
+      headers: {},
+    };
+
+    axios(config)
+      .then((response) => {
+        const array = response.data;
+        const indonesia = array[array.length - 1];
+        const indonesiatotalPositif = indonesia.Confirmed.toLocaleString();
+        const indonesiatotalMeninggal = indonesia.Deaths.toLocaleString();
+        const indonesiatotalSembuh = indonesia.Recovered.toLocaleString();
+        this.setState({
+          indonesiatotalPositif,
+          indonesiatotalMeninggal,
+          indonesiatotalSembuh,
+        });
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
+  };
   render() {
     return (
       <div className="mb-4">
@@ -21,24 +91,24 @@ export default class Header extends Component {
             <h4 className="mb-2">Global</h4>
             <hr className="m-1"></hr>
             <div>
-              <span>Positif</span>
+              <span>Total Positif</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.globaltotalPositif}</strong>
               </span>
             </div>
             <div>
-              <span>Sembuh</span>
+              <span>Total Sembuh</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.globaltotalSembuh}</strong>
               </span>
             </div>
             <div>
-              <span>Meninggal</span>
+              <span>Total Meninggal</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.globaltotalMeninggal}</strong>
               </span>
             </div>
           </Col>
@@ -46,24 +116,24 @@ export default class Header extends Component {
             <h4 className="mb-2 ">Indonesia</h4>
             <hr className="m-1"></hr>
             <div>
-              <span>Positif</span>
+              <span>Total Positif</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.indonesiatotalPositif}</strong>
               </span>
             </div>
             <div>
-              <span>Sembuh</span>
+              <span>Total Sembuh</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.indonesiatotalSembuh}</strong>
               </span>
             </div>
             <div>
-              <span>Meninggal</span>
+              <span>Total Meninggal</span>
               <br />
               <span>
-                <strong>11299921</strong>
+                <strong>{this.state.indonesiatotalMeninggal}</strong>
               </span>
             </div>
             <p className="my-4">
