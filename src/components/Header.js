@@ -13,7 +13,6 @@ export default class Header extends Component {
       indonesiatotalPositif: 0,
       indonesiatotalMeninggal: 0,
       indonesiatotalSembuh: 0,
-
       // provinsi: [],
     };
   }
