@@ -33,36 +33,38 @@ export default class Tables extends Component {
   }
   render() {
     return (
-      <div className="m-auto w-75">
-        <h3 className="mt-3">
+      <div id="provinsi" className="m-auto w-75">
+        <h2 className="my-3">
           Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi
-        </h3>
-        <Table striped bordered hover>
-          <thead>
-            <tr>
-              <th>No. </th>
-              <th>Kode Provinsi</th>
-              <th>Provinsi</th>
-              <th>Positif</th>
-              <th>Sembuh</th>
-              <th>Meninggal</th>
-            </tr>
-          </thead>
-          <tbody>
-            {this.state.provinsi.map((value) => {
-              return (
-                <tr>
-                  <td>{value.attributes.FID}</td>
-                  <td>{value.attributes.Kode_Provi}</td>
-                  <td>{value.attributes.Provinsi}</td>
-                  <td>{value.attributes.Kasus_Posi}</td>
-                  <td>{value.attributes.Kasus_Semb}</td>
-                  <td>{value.attributes.Kasus_Meni}</td>
-                </tr>
-              );
-            })}
-          </tbody>
-        </Table>
+        </h2>
+        <div className="scroll">
+          <Table striped bordered hover>
+            <thead className="bg-danger text-white">
+              <tr>
+                <th>No. </th>
+                <th>Kode Provinsi</th>
+                <th>Provinsi</th>
+                <th>Positif</th>
+                <th>Sembuh</th>
+                <th>Meninggal</th>
+              </tr>
+            </thead>
+            <tbody>
+              {this.state.provinsi.map((value) => {
+                return (
+                  <tr>
+                    <td>{value.attributes.FID}</td>
+                    <td>{value.attributes.Kode_Provi}</td>
+                    <td>{value.attributes.Provinsi}</td>
+                    <td>{value.attributes.Kasus_Posi}</td>
+                    <td>{value.attributes.Kasus_Semb}</td>
+                    <td>{value.attributes.Kasus_Meni}</td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </Table>
+        </div>
       </div>
     );
   }

@@ -20,3 +20,12 @@ strong {
 .logo {
   width: 30%;
 }
+
+.scroll {
+  overflow-y: scroll;
+  height: 600px;
+}
+
+.bg-grey {
+  background-color: #f2f3f9;
+}

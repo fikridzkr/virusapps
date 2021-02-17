@@ -84,7 +84,7 @@ export default class Header extends Component {
             </p>
           </Container>
         </Jumbotron>
-        <h1>Data Sebaran</h1>
+        <h1>Data Sebaran Coronavirus Di Dunia dan Indonesia</h1>
         <Row className="mx-4">
           <Col md={3} className="bg-cream p-4 text-left ">
             <h4 className="mb-2">Global</h4>
