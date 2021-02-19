@@ -1,53 +1,53 @@
 import React, { Component } from "react";
-import { Col, Row, Card, Button } from "react-bootstrap";
-
+import { Row, Card, Container } from "react-bootstrap";
+import hotline from "./hotline.json";
 export default class Hotline extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      hotline: hotline,
+    };
+  }
+
   render() {
+    const { hotline } = this.state;
     return (
-      <div className="m-auto display-block" id="hotline">
+      <div className="mb-5" id="hotline">
         <h1 className="my-3">Coronavirus Hotline Indonesia</h1>
-        <p>
+        <p className="size">
           Layanan darurat via telepon yang disediakan oleh Kemkes dan juga
           Pemprov DKI Jakarta
         </p>
-        <Row>
-          <Col md={2} className="bg-grey mr-3">
-            <Card.Body>
-              <img href="" alt="logo" />
-              <Card.Text>
-                <a href="tel:2222">nomor</a>
-              </Card.Text>
-              <p>mentri</p>
-            </Card.Body>
-          </Col>
-          <Col md={2} className="bg-grey mr-3">
-            <Card.Body>
-              <img href="" alt="logo" />
-              <Card.Text>
-                <a href="tel:2222">nomor</a>
-              </Card.Text>
-              <p>mentri</p>
-            </Card.Body>
-          </Col>
-          <Col md={2} className="bg-grey mr-3">
-            <Card.Body>
-              <img href="" alt="logo" />
-              <Card.Text>
-                <a href="tel:2222">nomor</a>
-              </Card.Text>
-              <p>mentri</p>
-            </Card.Body>
-          </Col>
-          <Col md={2} className="bg-grey mr-3">
-            <Card.Body>
-              <img href="" alt="logo" />
-              <Card.Text>
-                <a href="tel:2222">nomor</a>
-              </Card.Text>
-              <p>mentri</p>
-            </Card.Body>
-          </Col>
-        </Row>
+        <Container>
+          <Row>
+            {hotline.map((value) => {
+              return (
+                <Card
+                  className="mx-auto my-2 shadow sizing-card"
+                  key={value.id}
+                >
+                  <Card.Body>
+                    <img
+                      src={value.gambar}
+                      alt="logo"
+                      className="img-fluid w-25 mb-2"
+                    />
+                    <Card.Text>
+                      <a
+                        href={"tel:" + value.nomor}
+                        className="text-decoration-none text-dark"
+                      >
+                        {value.nomor}
+                      </a>
+                    </Card.Text>
+                    <p>{value.nama}</p>
+                  </Card.Body>
+                </Card>
+              );
+            })}
+          </Row>
+        </Container>
       </div>
     );
   }

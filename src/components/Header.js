@@ -139,12 +139,14 @@ export default class Header extends Component {
               <Dates />
             </p>
           </Col>
-          <Col md={6} className="images ">
-            <div className="h-100 pl-4 row flex-column justify-content-center align-items-start text-white">
-              <h2>
+          <Col md={6} className="images">
+            <div className="h-100 pl-4 row flex-column justify-content-center align-items-start text-white img-fluid">
+              <h2 className="mt-4">
                 Situasi Virus COVID-19 <br /> Di indonesia
               </h2>
-              <Button className="mt-3 ">Simak Tayangan Data Langsung</Button>
+              <Button className="mt-3 mb-5">
+                Simak Tayangan Data Langsung
+              </Button>
             </div>
           </Col>
         </Row>

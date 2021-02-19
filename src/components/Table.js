@@ -34,11 +34,11 @@ export default class Tables extends Component {
   render() {
     return (
       <div id="provinsi" className="m-auto w-75">
-        <h2 className="my-3">
+        <h1 className="my-3">
           Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi
-        </h2>
+        </h1>
         <div className="scroll">
-          <Table striped bordered hover>
+          <Table striped bordered hover responsive>
             <thead className="bg-danger text-white">
               <tr>
                 <th>No. </th>

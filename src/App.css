@@ -29,3 +29,53 @@ strong {
 .bg-grey {
   background-color: #f2f3f9;
 }
+
+@media screen and (min-width: 320px) {
+  h1 {
+    font-size: 6.5vw;
+  }
+
+  h2 {
+    font-size: 6.5vw;
+  }
+
+  .size {
+    font-size: 3.5vw;
+  }
+  .sizing-card {
+    width: 15rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  h1 {
+    font-size: 5vw;
+  }
+
+  h2 {
+    font-size: 3.5vw;
+  }
+  .size {
+    font-size: 2.6vw;
+  }
+
+  .sizing-card {
+    width: 45vw;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 3vw;
+  }
+
+  h2 {
+    font-size: 2.5vw;
+  }
+  .size {
+    font-size: 1.7vw;
+  }
+  .sizing-card {
+    width: 15rem;
+  }
+}
