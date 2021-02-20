@@ -73,7 +73,7 @@ export default class Header extends Component {
   };
   render() {
     return (
-      <div className="mb-4">
+      <div>
         <Jumbotron fluid className="bg-danger text-white">
           <Container>
             <h1>#Indonesialawancorona</h1>
@@ -85,6 +85,7 @@ export default class Header extends Component {
           </Container>
         </Jumbotron>
         <h1>Data Sebaran Coronavirus Di Dunia dan Indonesia</h1>
+        <hr className="hr bg-dark" />
         <Row className="mx-4">
           <Col md={3} className="bg-cream p-4 text-left ">
             <h4 className="mb-2">Global</h4>

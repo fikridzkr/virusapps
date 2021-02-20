@@ -10,7 +10,8 @@ const Navigation = () => {
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
             <Nav.Link href="/">Home</Nav.Link>
-            <Nav.Link href="#provinsi">Data Provinsi</Nav.Link>
+            <Nav.Link href="#chart">Statistik Covid-19 di Indonesia</Nav.Link>
+            <Nav.Link href="#provinsi">Data Kasus di Provinsi</Nav.Link>
             <Nav.Link href="#hotline">Hotline</Nav.Link>
           </Nav>
         </Navbar.Collapse>

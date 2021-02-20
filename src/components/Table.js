@@ -34,9 +34,10 @@ export default class Tables extends Component {
   render() {
     return (
       <div id="provinsi" className="m-auto w-75">
-        <h1 className="my-3">
+        <h1 className="mt-5">
           Data Kasus Coronavirus di Indonesia Berdasarkan Provinsi
         </h1>
+        <hr className="hr bg-dark" />
         <div className="scroll">
           <Table striped bordered hover responsive>
             <thead className="bg-danger text-white">

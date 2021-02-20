@@ -14,7 +14,8 @@ export default class Hotline extends Component {
     const { hotline } = this.state;
     return (
       <div className="mb-5" id="hotline">
-        <h1 className="my-3">Coronavirus Hotline Indonesia</h1>
+        <h1 className="mt-5">Coronavirus Hotline Indonesia</h1>
+        <hr className="hr bg-dark" />
         <p className="size">
           Layanan darurat via telepon yang disediakan oleh Kemkes dan juga
           Pemprov DKI Jakarta

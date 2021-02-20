@@ -45,6 +45,12 @@ strong {
   .sizing-card {
     width: 15rem;
   }
+
+  .hr {
+    width: 30vw;
+    height: 2px;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -62,6 +68,12 @@ strong {
   .sizing-card {
     width: 45vw;
   }
+
+  .hr {
+    width: 35vw;
+    height: 4px;
+    border-radius: 10px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
@@ -77,5 +89,11 @@ strong {
   }
   .sizing-card {
     width: 15rem;
+  }
+
+  .hr {
+    width: 20vw;
+    height: 4px;
+    border-radius: 10px;
   }
 }
