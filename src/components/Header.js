@@ -26,7 +26,8 @@ export default class Header extends Component {
   globalData = () => {
     let config = {
       method: "get",
-      url: "/summary",
+      url:
+        "https://covidupdate-40c1a.web.app/https://api.covid19api.com/summary",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
@@ -52,7 +53,8 @@ export default class Header extends Component {
   indonesiaData = () => {
     let config = {
       method: "get",
-      url: "/live/country/indonesia",
+      url:
+        "https://covidupdate-40c1a.web.app/https://api.covid19api.com/live/country/indonesia",
       headers: {
         "Access-Control-Allow-Origin": "*",
       },
