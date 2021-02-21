@@ -39,7 +39,6 @@ const Chart = () => {
       .catch((err) => {
         console.log(err);
       });
-    console.log(idData);
   };
 
   useEffect(() => {
