@@ -26,11 +26,8 @@ export default class Header extends Component {
   globalData = () => {
     let config = {
       method: "get",
-      url:
-        "https://covidupdate-40c1a.web.app/https://api.covid19api.com/summary",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
+      url: "https://api.covid19api.com/summary",
+      headers: {},
     };
 
     axios(config)
@@ -53,11 +50,8 @@ export default class Header extends Component {
   indonesiaData = () => {
     let config = {
       method: "get",
-      url:
-        "https://covidupdate-40c1a.web.app/https://api.covid19api.com/live/country/indonesia",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
+      url: "https://api.covid19api.com/live/country/indonesia",
+      headers: {},
     };
 
     axios(config)

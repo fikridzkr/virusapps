@@ -8,16 +8,8 @@ const Chart = () => {
 
   const chart = () => {
     let idData = [];
-
-    let config = {
-      method: "get",
-      url: "/live/country/indonesia",
-      headers: {
-        "Access-Control-Allow-Origin": "*",
-      },
-    };
-
-    axios(config)
+    axios
+      .get("https://api.covid19api.com/live/country/indonesia")
       .then((res) => {
         const response = res.data;
         const indonesia = response[response.length - 1];
