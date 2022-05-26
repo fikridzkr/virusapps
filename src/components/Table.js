@@ -51,7 +51,7 @@ export default class Tables extends Component {
               </tr>
             </thead>
             <tbody>
-              {this.state.provinsi.map((value) => {
+              {this.state.provinsi?.map((value) => {
                 return (
                   <tr>
                     <td>{value.attributes.FID}</td>
